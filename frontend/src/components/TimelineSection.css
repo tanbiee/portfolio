@@ -1,0 +1,146 @@
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.timeline-column-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    color: var(--neon-cyan);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+/* Timeline vertical line */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--neon-green), var(--neon-cyan), transparent);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--neon-green);
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+    z-index: 1;
+}
+
+.timeline-card {
+    padding: 24px;
+}
+
+.timeline-icon {
+    font-size: 1.5rem;
+    color: var(--neon-green);
+    margin-bottom: 12px;
+}
+
+.timeline-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin-bottom: 6px;
+}
+
+.timeline-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.timeline-date {
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--neon-cyan);
+    background: rgba(0, 212, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.timeline-bullets {
+    padding-left: 0;
+}
+
+.timeline-bullets li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.timeline-bullets li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--neon-green);
+}
+
+/* Cert cards */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+}
+
+.cert-icon {
+    font-size: 1.8rem;
+    color: var(--neon-cyan);
+    flex-shrink: 0;
+}
+
+.cert-info h4 {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    color: var(--text-heading);
+    margin-bottom: 4px;
+}
+
+.cert-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+}

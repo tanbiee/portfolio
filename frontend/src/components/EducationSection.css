@@ -1,0 +1,121 @@
+.git-log {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.git-commit {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.git-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 20px;
+}
+
+.git-node {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--neon-green);
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+    flex-shrink: 0;
+    margin-top: 24px;
+}
+
+.git-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(180deg, var(--neon-green), rgba(0, 255, 136, 0.2));
+    margin-top: 4px;
+}
+
+.git-content {
+    flex: 1;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.git-hash {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hash-text {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--neon-cyan);
+    background: rgba(0, 212, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.git-date {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.git-degree {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.degree-icon {
+    color: var(--neon-green);
+}
+
+.git-field {
+    font-size: 0.9rem;
+    color: var(--neon-green);
+    margin-bottom: 4px;
+}
+
+.git-school {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.git-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.git-location {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.git-grade {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: var(--neon-green);
+    background: rgba(0, 255, 136, 0.08);
+    padding: 2px 12px;
+    border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+    .git-hash {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

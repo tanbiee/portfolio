@@ -1,0 +1,19 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Divider between sections */
+.main-content>section+section {
+  border-top: 1px solid rgba(0, 255, 136, 0.05);
+}
+
+/* Subtle gradient overlays between sections */
+.main-content>section:nth-child(even) {
+  background: rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,112 @@
+.project-card-wrapper {
+    perspective: 1000px;
+}
+
+.project-card {
+    transition: transform 0.15s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.15), 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    color: var(--neon-green);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3));
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.collab-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--neon-cyan);
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.35);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.project-links {
+    display: flex;
+    gap: 12px;
+}
+
+.project-links a {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--neon-green);
+    transform: translateY(-2px);
+}
+
+.project-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 6px;
+}
+
+.project-date {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.project-bullets {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.project-bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.project-bullets li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--neon-green);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.project-tech .tech-tag {
+    font-size: 0.72rem;
+    padding: 4px 12px;
+}
