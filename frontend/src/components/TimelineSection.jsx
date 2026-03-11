@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiAward, FiBookOpen, FiCode, FiCloud } from 'react-icons/fi';
+import { FiAward, FiBookOpen, FiCode, FiCloud, FiExternalLink } from 'react-icons/fi';
 import { SiHackerrank } from 'react-icons/si';
 import './TimelineSection.css';
 
@@ -10,6 +10,7 @@ const trainingItems = [
         subtitle: 'Lovely Professional University, Phagwara',
         date: 'Feb 2025 – May 2025',
         icon: <FiCode />,
+        link: 'https://files.lpu.in/umsweb/skilldevcourse/SkillDevelopmentCertificates/12318633_848_20_08_2025.pdf?_gl=1%2A4pabtl%2A_gcl_au%2AMjA0MDIxOTE4Mi4xNzYyNDk5MTQwLjQwMzY0MjQzNy4xNzYyNDk5MTU2LjE3NjI0OTkxNzY.%2A_ga%2ANzUyOTU0NzUzLjE3NTk5NDU2Mjc.%2A_ga_WKLQCVXZ47%2AczE3NjM5ODg0NDkkbzMkZzEkdDE3NjM5ODg1MDIkajckbDAkaDA',
         bullets: [
             'Mastered core CS fundamentals including arrays, linked lists, stacks, queues, trees, and graphs.',
             'Solved 100+ coding problems on LeetCode and GeeksforGeeks.',
@@ -19,9 +20,9 @@ const trainingItems = [
 ];
 
 const certifications = [
-    { title: 'SQL Basic', org: 'HackerRank', date: 'Aug 2025 – Sep 2025', icon: <SiHackerrank /> },
-    { title: 'Cloud Computing', org: 'NPTEL', date: 'Feb 2025 – May 2025', icon: <FiCloud /> },
-    { title: 'Python Industrial Training', org: 'CodeSprint', date: 'Feb 2024 – Mar 2024', icon: <FiBookOpen /> },
+    { title: 'SQL Basic', org: 'HackerRank', date: 'Aug 2025 – Sep 2025', icon: <SiHackerrank />, link: 'https://www.hackerrank.com/certificates/412ac63123e2' },
+    { title: 'Cloud Computing', org: 'NPTEL', date: 'Feb 2025 – May 2025', icon: <FiCloud />, link: 'https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs11/Course/NPTEL25CS11S104750081404255310.pdf' },
+    { title: 'Python Industrial Training', org: 'CodeSprint', date: 'Feb 2024 – Mar 2024', icon: <FiBookOpen />, link: 'https://certify.codesprint.in/verify/iJGzCGFw' },
 ];
 
 export default function TimelineSection() {
@@ -65,6 +66,11 @@ export default function TimelineSection() {
                                                 <li key={j}>{b}</li>
                                             ))}
                                         </ul>
+                                        {item.link && (
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="view-cert-btn">
+                                                View Certificate <FiExternalLink />
+                                            </a>
+                                        )}
                                     </div>
                                 </motion.div>
                             ))}
@@ -90,6 +96,13 @@ export default function TimelineSection() {
                                         <h4>{cert.title}</h4>
                                         <p>{cert.org}</p>
                                         <span className="timeline-date">{cert.date}</span>
+                                        {cert.link && (
+                                            <div style={{marginTop: '4px'}}>
+                                                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="view-cert-btn" style={{marginTop: 0}}>
+                                                    View Certificate <FiExternalLink />
+                                                </a>
+                                            </div>
+                                        )}
                                     </div>
                                 </motion.div>
                             ))}

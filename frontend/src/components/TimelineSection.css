@@ -139,6 +139,23 @@
     margin-bottom: 4px;
 }
 
+.view-cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--neon-cyan);
+    margin-top: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Fira Code', monospace;
+}
+
+.view-cert-btn:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
 @media (max-width: 768px) {
     .timeline-grid {
         grid-template-columns: 1fr;
