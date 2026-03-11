@@ -69,7 +69,7 @@ export default function AboutSection() {
                         {[
                             { number: '200+', label: 'LeetCode Problems' },
                             { number: '3+', label: 'Full-Stack Projects' },
-                            { number: '14', label: 'GitHub Repositories' },
+                            { number: '15+', label: 'GitHub Repositories' },
                             { number: '7.71', label: 'CGPA' },
                         ].map((stat, i) => (
                             <motion.div

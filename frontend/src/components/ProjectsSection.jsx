@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FiCpu, FiTrendingUp, FiGlobe, FiEdit3, FiLayout, FiShoppingCart, FiMusic } from 'react-icons/fi';
+import { FiCpu, FiTrendingUp, FiGlobe, FiEdit3, FiLayout, FiShoppingCart, FiMusic, FiGithub } from 'react-icons/fi';
 import ProjectCard from './ProjectCard';
 import './ProjectsSection.css';
 
@@ -115,6 +115,17 @@ export default function ProjectsSection() {
                         <ProjectCard key={project.title} project={project} index={i} inView={inView} />
                     ))}
                 </div>
+
+                <motion.div 
+                    className="projects-footer"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                    <a href="https://github.com/tanbiee" target="_blank" rel="noopener noreferrer" className="neon-btn github-more-btn">
+                        <FiGithub /> Explore More on GitHub
+                    </a>
+                </motion.div>
             </div>
         </section>
     );
